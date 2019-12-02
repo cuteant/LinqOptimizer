@@ -9,7 +9,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\LinqOptimizer.CSharp\LinqOptimizer.CSharp.csproj" />
-    <ProjectReference Include="..\LinqOptimizer.Tests.FSharp\LinqOptimizer.Tests.FSharp.fsproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FsCheck" Version="2.14.0" />

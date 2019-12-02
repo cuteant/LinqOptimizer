@@ -1,14 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <WarningsAsErrors />
+    <TargetFrameworks>netcoreapp2.1;netstandard2.0</TargetFrameworks>
+    <RootNamespace>Nessos.LinqOptimizer.Base</RootNamespace>
+    <AssemblyName>LinqOptimizer.Base</AssemblyName>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>LinqOptimizer.Base.StrongName</PackageId>
+    <Title>LinqOptimizer.Base.StrongName</Title>
+    <Description>LinqOptimizer.Base</Description>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\LinqOptimizer.Core\LinqOptimizer.Core.fsproj" />
   </ItemGroup>
+
 </Project>

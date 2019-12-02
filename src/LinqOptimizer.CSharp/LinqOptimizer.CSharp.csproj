@@ -1,14 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <WarningsAsErrors />
+    <TargetFrameworks>netcoreapp2.1;netstandard2.0</TargetFrameworks>
+    <RootNamespace>Nessos.LinqOptimizer.CSharp</RootNamespace>
+    <AssemblyName>LinqOptimizer.CSharp</AssemblyName>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>LinqOptimizer.CSharp.StrongName</PackageId>
+    <Title>LinqOptimizer.CSharp.StrongName</Title>
+    <Description>An automatic query optimizer for LINQ to Objects and PLINQ. 
+    LinqOptimizer compiles declarative LINQ queries into fast loop-based imperative code.
+    The compiled code has fewer virtual calls, better data locality and speedups of up to 15x.</Description>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\LinqOptimizer.Base\LinqOptimizer.Base.csproj" />
   </ItemGroup>
+
 </Project>

@@ -1,13 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <WarningsAsErrors />
+    <TargetFrameworks>netcoreapp2.1;netstandard2.0</TargetFrameworks>
+    <RootNamespace>Nessos.LinqOptimizer.Core</RootNamespace>
+    <AssemblyName>LinqOptimizer.Core</AssemblyName>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>LinqOptimizer.Core.StrongName</PackageId>
+    <Title>LinqOptimizer.Core.StrongName</Title>
+    <Description>LinqOptimizer.Core</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="$(FSharpCorePackageVersion)" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$(TargetFramework) == 'netstandard2.0'">
+    <PackageReference Include="System.Reflection.Emit" Version="$(SystemReflectionEmitPackageVersion)" />
+  </ItemGroup>
+
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Utils.fs" />
@@ -31,11 +45,5 @@
     <Compile Include="Session.fs" />
     <Compile Include="ExtensionMethods.fs" />
   </ItemGroup>
-  <ItemGroup Condition="$(TargetFramework) == 'net45'">
-    <PackageReference Update="FSharp.Core" Version="3.1.2" />
-  </ItemGroup>
-  <ItemGroup Condition="$(TargetFramework) == 'netstandard2.0'">
-    <PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
-    <PackageReference Update="FSharp.Core" Version="4.3.0" />
-  </ItemGroup>
+
 </Project>

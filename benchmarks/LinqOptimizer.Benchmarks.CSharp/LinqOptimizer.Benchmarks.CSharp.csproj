@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp2.2;net461</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.2;</TargetFrameworks>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="BenchmarkDotNet" Version="0.11.5" />
+    <PackageReference Include="BenchmarkDotNet" Version="$(BenchmarkDotNetPackageVersion)" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\LinqOptimizer.CSharp\LinqOptimizer.CSharp.csproj" />
